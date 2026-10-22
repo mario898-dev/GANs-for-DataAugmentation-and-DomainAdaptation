@@ -13,7 +13,7 @@ An end-to-end deep learning framework investigating **Generative Data Augmentati
 </p>
 
 <p align="center">
-  <a href="GANs_for_DA%26DA.pdf">📄 <strong>Download the Full Research Paper (PDF)</strong></a>
+  <a href="GANs_for_DA%26DA.pdf">📄 <strong>Download the Full Paper (PDF)</strong></a>
 </p>
 
 ---
