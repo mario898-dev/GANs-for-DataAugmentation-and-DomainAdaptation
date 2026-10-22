@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """
 Esperimento Cross-Hospital Domain Adaptation (DANN, unsupervised).
 
@@ -14,7 +17,7 @@ che differiscono SOLO nella forza della GRL:
 Ogni cartella (source/target) deve avere la struttura:
    <root>/{train,val,test}/{NORMAL,PNEUMONIA}/*.png
 
-Uso:  python main_dann_cross_hospital.py
+Uso:  python experiments/run_dann_cross_hospital.py
 """
 
 import os
@@ -113,7 +116,7 @@ def _ensure_synthetic(device):
         print(f"  Sintetici gia' presenti ({have}). Skip generazione.")
         return
     from config import GAN_NZ, GAN_N_CLASS, GAN_NC
-    from eval import generate_synthetic_images
+    from evaluation.evaluate import generate_synthetic_images
     from models.sngan_128 import SNGenerator as Generator
     print(f"  Genero {num_synth} sintetici NORMAL da {BEST_GAN_CKPT} ...")
     G = Generator(nz=GAN_NZ, n_class=GAN_N_CLASS, nc=GAN_NC, d=GEN_D).to(device)

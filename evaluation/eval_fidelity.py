@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 import torch_fidelity
 import wandb
 import os
@@ -17,7 +20,7 @@ from models.sngan_128 import SNGenerator as Generator
 # from models.wgan import Generator
 # from models.sngan import SNGenerator as Generator
 
-from eval import generate_synthetic_images
+from evaluation.evaluate import generate_synthetic_images
 from utils.seed import set_seed
 
 class ResizedImageDataset(Dataset):

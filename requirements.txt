@@ -7,3 +7,5 @@ seaborn
 wandb
 torch-fidelity
 umap-learn
+tqdm
+Pillow

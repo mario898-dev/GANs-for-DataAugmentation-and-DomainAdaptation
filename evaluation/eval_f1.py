@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 import argparse
 import os
 import torch
@@ -6,7 +9,7 @@ import wandb
 from config import DATASET_DIR, RESNET_IMG_SIZE, RESNET_BATCH_SIZE, RESNET_NUM_CLASSES
 from dataset.loader import setup_dataset, get_dataloaders
 from models.resnet import ResNetClassifier
-from eval import evaluate_on_test
+from evaluation.evaluate import evaluate_on_test
 
 def main(ckpt_path):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

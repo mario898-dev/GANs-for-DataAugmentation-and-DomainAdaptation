@@ -1,4 +1,6 @@
-import os
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 import shutil
 import random
 import torch
@@ -49,9 +51,9 @@ GEN_D = 128  # SNGAN_D dalla config
 # IMPORT FUNZIONI PROGETTO
 # ==============================================================================
 from dataset.loader import setup_dataset, get_dataloaders
-from train import train_resnet
+from training.train import train_resnet
 import wandb
-from eval import evaluate_on_test, generate_synthetic_images
+from evaluation.evaluate import evaluate_on_test, generate_synthetic_images
 from utils.seed import set_seed
 from config import (
     DATASET_DIR, RESULTS_DIR, METRICS_DIR,

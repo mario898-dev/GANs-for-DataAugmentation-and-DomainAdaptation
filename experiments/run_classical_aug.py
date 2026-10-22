@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """
 Ablation Study — Data Augmentation Classica per Chest X-Ray.
 
@@ -21,7 +24,7 @@ Pipeline:
   3. Stampa tabella riepilogativa e logga tutto su W&B
 
 Uso:
-  python main_classical_aug.py
+  python experiments/run_classical_aug.py
 """
 
 import os
@@ -41,8 +44,8 @@ from config import (
     SEED,
 )
 from dataset.loader import setup_dataset, get_dataloaders
-from train import train_resnet
-from eval import evaluate_on_test
+from training.train import train_resnet
+from evaluation.evaluate import evaluate_on_test
 from utils.seed import set_seed
 
 

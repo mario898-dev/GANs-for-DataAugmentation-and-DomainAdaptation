@@ -173,3 +173,18 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 .DS_Store
+
+# Project datasets, checkpoints, and outputs
+data/*
+!data/.gitkeep
+checkpoints/*
+!checkpoints/.gitkeep
+results/*
+!results/.gitkeep
+metrics/
+gan_samples/
+synthetic/
+augmented/
+wandb/
+*.pdf
+

@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """
 Analisi Grad-CAM del classificatore ResNet-18 addestrato sul dataset
 AUGMENTED-75% (real + 75% del gap colmato con sintetici).
@@ -165,7 +168,7 @@ def maybe_generate_synth(device):
         return
     try:
         from config import GAN_NZ, GAN_N_CLASS, GAN_NC, GAN_D
-        from eval import generate_synthetic_images
+        from evaluation.evaluate import generate_synthetic_images
         from models.sngan_128 import SNGenerator as Generator
         print(f"  Genero {N_SYNTH_TO_GENERATE} sintetici NORMAL da {GAN_GENERATOR_CKPT} ...")
         G = Generator(nz=GAN_NZ, n_class=GAN_N_CLASS, nc=GAN_NC, d=GAN_D).to(device)

@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """Pipeline DANN per Synthetic Domain Adaptation (Synth->Real)."""
 
 
@@ -16,8 +19,8 @@ from config import (
 from dataset.loader import setup_dataset, get_dataloaders
 from dataset.synth_real_loader import get_synth_dann_loaders
 from models.dann_synth import DANNSynth
-from eval import evaluate_on_test, generate_synthetic_images
-from train_dann_synth import train_dann_synth, evaluate_dann_synth
+from evaluation.evaluate import evaluate_on_test, generate_synthetic_images
+from training.train_dann_synth import train_dann_synth, evaluate_dann_synth
 from utils.seed import set_seed
 
 # ==============================================================================

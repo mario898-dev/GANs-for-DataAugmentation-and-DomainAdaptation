@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """
 Main script che orchestra l'intera pipeline usando i moduli separati.
 """
@@ -23,8 +26,8 @@ from config import (
 )
 from dataset.loader import setup_dataset, get_dataloaders, get_gan_dataloader
 from models.wgan import Generator, Critic, compute_gp
-from train import train_resnet, train_wgangp
-from eval import evaluate_on_test, generate_synthetic_images, plot_comparison
+from training.train import train_resnet, train_wgangp
+from evaluation.evaluate import evaluate_on_test, generate_synthetic_images, plot_comparison
 from utils.seed import set_seed
 
 

@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """
 Script minimale: carica i pesi di una ResNet già addestrata e calcola
 la Macro F1 (e il classification report completo) sul test set.

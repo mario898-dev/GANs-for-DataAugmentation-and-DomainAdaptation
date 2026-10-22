@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """
 Pipeline CDAN per Synthetic Domain Adaptation (Synth→Real).
 
@@ -17,7 +20,7 @@ Prerequisiti:
   - Dataset in ./data/modified_dataset/
 
 Utilizzo:
-  python main_cdan_synth.py
+  python experiments/run_cdan_synth.py
 """
 
 import torch
@@ -35,8 +38,8 @@ from config import (
 from dataset.loader import setup_dataset, get_dataloaders
 from dataset.synth_real_loader import get_synth_dann_loaders
 from models.cdan_synth import CDANSynth
-from eval import evaluate_on_test, generate_synthetic_images
-from train_cdan_synth import train_cdan_synth, evaluate_cdan_synth
+from evaluation.evaluate import evaluate_on_test, generate_synthetic_images
+from training.train_cdan_synth import train_cdan_synth, evaluate_cdan_synth
 from utils.seed import set_seed
 
 # ==============================================================================

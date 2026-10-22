@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """Esegue i due esperimenti baseline: Class Weighting e Oversampling."""
 
 
@@ -13,8 +16,8 @@ from config import (
     SEED,
 )
 from dataset.loader import setup_dataset, get_dataloaders, get_balanced_train_dataloader
-from train import train_resnet
-from eval import evaluate_on_test
+from training.train import train_resnet
+from evaluation.evaluate import evaluate_on_test
 from utils.seed import set_seed
 
 

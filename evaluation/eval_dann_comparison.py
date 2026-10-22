@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """Confronto Macro F1: Pre-DANN vs Post-DANN sul test set REALE (Tabella 7).
 
 Solo inferenza, nessun training, nessun wandb.

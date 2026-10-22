@@ -1,3 +1,6 @@
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), '..'))
+
 """
 Script standalone: carica i pesi di una DANNSynth già addestrata e calcola
 la Macro F1 (e il classification report completo) sul test set.
@@ -15,7 +18,7 @@ import wandb
 from config import DATASET_DIR, RESNET_IMG_SIZE, RESNET_BATCH_SIZE, METRICS_DIR
 from dataset.loader import setup_dataset, get_dataloaders
 from models.dann_synth import DANNSynth
-from train_dann_synth import evaluate_dann_synth
+from training.train_dann_synth import evaluate_dann_synth
 
 
 def main(ckpt_path):
