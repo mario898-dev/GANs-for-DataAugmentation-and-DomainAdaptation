@@ -187,4 +187,6 @@ synthetic/
 augmented/
 wandb/
 *.pdf
+!GANs_for_DA&DA.pdf
+
 

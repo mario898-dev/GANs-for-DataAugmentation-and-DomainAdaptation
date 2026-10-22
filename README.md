@@ -4,11 +4,16 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Weights & Biases](https://img.shields.io/badge/W&B-FFBE00?style=flat&logo=WeightsAndBiases&logoColor=black)](https://wandb.ai/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Paper PDF](https://img.shields.io/badge/Paper-Download%20PDF-red.svg?logo=adobeacrobatreader&logoColor=white)](GANs_for_DA%26DA.pdf)
 
 An end-to-end deep learning framework investigating **Generative Data Augmentation (cWGAN-GP, cSNGAN)** and **Adversarial Domain Adaptation (DANN, CDAN+E)** to address severe class imbalance and domain shift in pediatric Chest X-Ray classification (Normal vs. Pneumonia).
 
 <p align="center">
   <img src="preview.png" alt="Framework Preview" width="850">
+</p>
+
+<p align="center">
+  <a href="GANs_for_DA%26DA.pdf">📄 <strong>Download the Full Research Paper (PDF)</strong></a>
 </p>
 
 ---
